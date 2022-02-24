@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+bool checkPalindrome(string s)
+{
+    int n = s.size();
+    int st=0;
+    int e=n-1;
+      
+    for(int i=0;i<n/2;i++)
+    {
+        if(s[st]!=s[e])
+        {
+            return 0;
+            break;
+        }
+        else
+        {
+            st++;
+            e--;
+        }
+    }
+    
+        return 1;
+ }// Write your code here.
+int main()
+{
+cout<<checkPalindrome("RacecaR");
+	return 0;
+}
